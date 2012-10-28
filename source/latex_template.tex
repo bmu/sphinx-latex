@@ -1,0 +1,63 @@
+% Dokumentklasse festlegen -----------------------------------------------------
+\documentclass[paper=A4,              % A4
+               twoside,               % zweiseitig
+               12pt,                  % Schriftgroesse
+               toc=listof,            % Abbildungs-, Tabellen und Literaturver-
+               toc=bib,               % zeichnis in Inhaltsverzeichnis aufnehmen
+               parskip=half,          % keine Einrueckung am Absatzanfang, sondern
+                                      % Abstaende zwischen Absaetzen
+               headsepline=true,      % Trennlinie oben
+               chapterprefix=true,    % Kapitel x mit angeben
+               chapterprefix=true,    % Anhang x mit angeben
+               bibliography=openstyle % Literaturverzeichnis formatieren
+               ]{scrbook}
+
+\usepackage{diss}
+
+\begin{document}
+
+% Titelseite -------------------------------------------------------------------
+
+\frontmatter
+
+\begin{titlepage}
+  \begin{center}
+    \textbf{\Huge {{ title }}}\\
+    \vspace{2cm}
+    \huge Dissertation\\
+    \vspace{2cm}
+    \large zur Erlangung des akademischen Grades eines \\
+    \vspace{1cm}
+    \textbf{\Large Doktors der Wissenschaften (Dr. Wis.)} \\
+    \vspace{1cm}
+    \Large im Fachbereich Interdisziplinäre Studien \\
+    \vspace{1cm}
+    \Large der Universität XY \\
+    \vspace{4cm}
+    \large vorgelegt von: bmu \\
+    \vspace{2cm}
+    \large My home town im {{ month }} {{ year }}
+  \end{center}
+\end{titlepage}
+
+% Ende Titelseite --------------------------------------------------------------
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\mainmatter
+
+{{content}}
+
+\backmatter
+
+\printbibliography
+
+\renewcommand{\indexname}{Stichwortverzeichnis}
+\printindex
+
+\end{document}
+
